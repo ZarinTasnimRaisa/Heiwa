@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once('DBconnect.php');
+require_once('dbconnect.php');
 
 // Add data to the books table
 if (isset($_POST['add'])) {
@@ -33,12 +33,6 @@ if (isset($_POST['search'])) {
     }
 }
 
-// Deletion logic for book data
-if (isset($_POST['delete'])) {
-    $delete_id = $_POST['delete_id']; // Get the unique ID of the row to be deleted
-    $delete_query = "DELETE FROM books WHERE b_id = '$delete_id'";
-    mysqli_query($conn, $delete_query);
-}
 
 // Fetch all books from the database
 $fetch_query = "SELECT * FROM books";
@@ -58,8 +52,7 @@ if (isset($result_search)) {
     <link rel="stylesheet" href="dashboard.css">
 	<style type="text/css">
         body {
-            background-image: url(https://wallpaperaccess.com/full/2222765.jpg);
-            
+            background-image: url('picture.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             margin: 0;
