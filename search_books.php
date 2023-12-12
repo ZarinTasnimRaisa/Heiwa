@@ -4,7 +4,6 @@ require_once('dbconnect.php');
 
 
 
-// Search functionality for book names
 if (isset($_POST['search'])) {
     $search_name = $_POST['search'];
     if (!empty($search_name)) {
@@ -14,13 +13,13 @@ if (isset($_POST['search'])) {
 }
 
 
-// Fetch all books from the database
+// Fetch 
 $fetch_query = "SELECT * FROM books";
 if (isset($result_search)) {
-    $result_books = $result_search; // Use search results if available
+    $result_books = $result_search; 
 } else {
-    $fetch_query_limit = "SELECT * FROM books LIMIT 10"; // Query to fetch 10 rows
-    $result_books = mysqli_query($conn, $fetch_query_limit); // Fetch 10 rows if no search
+    $fetch_query_limit = "SELECT * FROM books LIMIT 10"; 
+    $result_books = mysqli_query($conn, $fetch_query_limit); 
 }
 ?>
 

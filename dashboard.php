@@ -72,7 +72,7 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('wallpaperflare.com_wallpaper (1).jpg');
+    background-image: url(https://wallpaperaccess.com/full/2222765.jpg);
     background-size: cover;
     background-position: center;
     min-height: 100vh;

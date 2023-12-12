@@ -5,10 +5,10 @@ require_once('DBconnect.php');
 
 //http://localhost:8080/CSE370_PROJECT/admin_login.php
 
-// we need to check if the input in the form textfields are not empty
+// to check if the input are not empty
 if(isset($_POST['email']) && isset($_POST['password'])){
     echo "LET HIM ENTER";
-	// write the query to check if this username and password exists in our database
+	//to check  username and password exists
 	$e = $_POST['email'];
 	$p = $_POST['password'];
 	$sql = "SELECT * FROM reader WHERE reader_email = '$e' AND reader_password = '$p'";
@@ -19,12 +19,12 @@ if(isset($_POST['email']) && isset($_POST['password'])){
 	//check if it returns an empty set
 	if(mysqli_num_rows($result) !=0 ){
         if (!isset($_SESSION['email'])) {
-            // Redirect to the login 
+            // Redirect 
             
             header("Location: reader_login.php");
         }
         
-        // Retrieve user information or perform any additional logic
+        // Retrieve information
         $email = $_SESSION['email'];
         
 	

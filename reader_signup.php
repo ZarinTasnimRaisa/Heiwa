@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } elseif ($reader_password !== $confirmPassword) {
         $error_message = "Error: Password and Confirm Password do not match.";
     } else {
-        // Check if email, NID, or phone number already exists
+        
         $email_query = "SELECT * FROM reader WHERE reader_email = '$reader_email'";
         $email_result = $conn->query($email_query);
 
@@ -26,11 +26,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } elseif ($nid_result->num_rows > 0) {
             $error_message = "Error: NID already exists. Please use a different one.";
         } else {
-            // Unique nid, email, and phone number
+            
             $insert_reader_sql = "INSERT INTO reader (reader_nid, reader_name, reader_email, reader_password) 
                                   VALUES ('$reader_nid', '$reader_name', '$reader_email', '$reader_password')";
             if ($conn->query($insert_reader_sql) === TRUE) {
-                // Redirect to admin login on successful sign-up
+                // Redirect 
                 header("Location: reader_profile1.php");
                 exit();
             } else {

@@ -94,7 +94,7 @@ if ($result && mysqli_num_rows($result) > 0) {
 <body>
     <div class="navigation">
         <a href="#">Heiwa | your New Online Library </a>
-        <a href="book.php">Books</a>
+        <a href="reader_book.php">Books</a>
         <a href="update.php">Edit Your Profile</a>
         <a href="rating.php">Rating</a>
         <a href="refinal_feedback.php">Feedback</a>
