@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $insert_author_sql = "INSERT INTO author_dashboard (name, email, password) 
                                   VALUES ('$name', '$email', '$password')";
             if ($conn->query($insert_author_sql) === TRUE) {
-                // Redirect to admin login on successful sign-up
+                // Redirect 
                 header("Location: author_dashboard.php");
                 exit();
             } else {
