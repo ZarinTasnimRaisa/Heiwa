@@ -6,18 +6,17 @@ require_once('DBconnect.php');
 
 //http://localhost/HEIWA/admin_login.php
 
-// we need to check if the input in the form textfields are not empty
+
 if(isset($_POST['email']) && isset($_POST['password'])){
     echo "LET HIM ENTER";
-	// write the query to check if this username and password exists in our database
+	// to check username and password exist
 	$e = $_POST['email'];
 	$p = $_POST['password'];
 	$sql = "SELECT * FROM admin_panel WHERE admin_email = '$e' AND admin_password = '$p'";
 	
 	//Execute the query 
 	$result = mysqli_query($conn, $sql);
-	//$row = mysqli_fetch_array($result,MYSQL_ASSOC);
-	//check if it returns an empty set
+	
 	if(mysqli_num_rows($result) !=0 ){
         if (!isset($_SESSION['email'])) {
             // Redirect to the login 
@@ -25,7 +24,7 @@ if(isset($_POST['email']) && isset($_POST['password'])){
             header("Location: admin_login.php");
         }
         
-        // Retrieve user information or perform any additional logic
+        // Retrieve user information
         $email = $_SESSION['email'];
         
 	
