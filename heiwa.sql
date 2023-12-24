@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 12, 2023 at 09:34 AM
+-- Generation Time: Dec 24, 2023 at 07:00 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -73,7 +73,6 @@ CREATE TABLE `author_dashboard` (
 --
 
 INSERT INTO `author_dashboard` (`name`, `biography`, `lists_of_books`, `social_media`, `email`, `password`) VALUES
-('Alex Michaelides', 'British-Cypriot author known for \"The Silent Patient,\" a gripping psychological thriller.', 'The Silent Patient, The Maidens', 'twitter.com/AlexMichaelides', 'alexmichaelides@email.com', '1234'),
 ('Celeste Ng', 'American author recognized for \"Little Fires Everywhere,\" exploring complex family dynamics.', 'Little Fires Everywhere, Everything I Never Told You', 'twitter.com/pronounced_ing', 'celesteng@email.com', '1234'),
 ('Colson Whitehead', 'American author known for \"The Underground Railroad,\" winner of the Pulitzer Prize for Fiction.', 'The Underground Railroad, Zone One', 'twitter.com/colsonwhitehead', 'colsonwhitehead@email.com', '1234'),
 ('Delia Owens', 'American author, zoologist, and co-author of non-fiction works, gained fame with \"Where the Crawdads Sing.\"', 'Where the Crawdads Sing, Cry of the Kalahari', 'N/A', 'deliaowens@email.com', '1234'),
